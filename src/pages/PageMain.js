@@ -1,10 +1,7 @@
-import "./styles.css";
+import "../styles.css";
+import Button from "@material-ui/core/Button";
 
 export default function App() {
-  // useState returns an array of the state variable, and the setter function
-  // This is a destructuring assignment, see
-  // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment
-
   return (
     <div className="App">
       <header>
@@ -13,8 +10,7 @@ export default function App() {
           <a href="#about">About</a>
           <div class="dropdown">
             <button class="dropbtn">
-              Resources
-              <i class="fa fa-caret-down"></i>
+              Resources<i class="fa fa-caret-down"></i>
             </button>
             <div class="dropdown-content">
               <a href="#">Chapter 1</a>
@@ -24,117 +20,97 @@ export default function App() {
           </div>
           <a href="#home">Home</a>
         </div>
-
-        <div id="imagewrapper">
-          <h2 class="center">
-            One-stop platform to empower YOU with cybersecurity skills and
-            knowledge to make better career decisions
-          </h2>
+        <div class="container">
+          <img
+            src="https://3.bp.blogspot.com/-GQdXZYTeY80/WAsinlu3UaI/AAAAAAAAHpE/4VNvl3IVdW8IPCnHfvpHdbRYQ6dKlY-7wCLcB/s1600/Hacker%2BBackground%2B1.jpg"
+            id="main-image"
+          />
+          <div class="box1"> HackerTeen </div>
+          <div class="centered">
+            Making the learning of cybersecurity knowledge and hacking skills
+            fun and simple
+          </div>
+        </div>
+        <div class="container">
+          <img
+            src="https://www.ets.org/s/k12/img/assessments-home.jpg"
+            id="main-image"
+          />
+          <div class="box1 white"> About </div>
+          <div class="centered overlay">
+            <h3>
+              As a one-stop platform to empower teenagers with cybersecurity
+              skills and knowledge to make better career decisions, we aim to
+              ignite the passions of the next generation
+            </h3>
+          </div>
         </div>
 
-        <div id="imagewrapper">
-          <div>
+        <div class="container" id="first-sec">
+          <div class="column-left">
+            <div className="box">
+              <h2 class="center black">My Courses</h2>
+              <p class="center black">
+                {" "}
+                Get back into where you last stopped
+                <br />
+                <br />
+                Current course: <strong> Intro to Cryptography</strong>
+                <br />
+                <br />
+                Completion Progress: <strong>63%</strong>{" "}
+              </p>
+              <div class="container">
+                <Button variant="contained" color="primary">
+                  Continue
+                </Button>
+              </div>
+            </div>
+          </div>
+          <div class="column-right">
             <img
-              src="https://3.bp.blogspot.com/-GQdXZYTeY80/WAsinlu3UaI/AAAAAAAAHpE/4VNvl3IVdW8IPCnHfvpHdbRYQ6dKlY-7wCLcB/s1600/Hacker%2BBackground%2B1.jpg"
-              width="800"
-              id="image"
+              src="https://www.cybertalk.org/wp-content/uploads/2019/11/iStock-963458556-1.jpg"
+              class="small-image"
             />
           </div>
-          <div>
-            <p class="center"> Igniting the passions of the next generation</p>
+        </div>
+
+        <div class="container" id="second-sec">
+          <div class="flip-column-left">
+            <img
+              src="https://i.pinimg.com/736x/46/25/fb/4625fbbf6cfd3d6f21de377446754a4b.jpg"
+              class="small-image"
+            />
+          </div>
+
+          <div class="flip-column-right">
+            <div className="box">
+              <h2 class="center black">Progress Update</h2>
+              <p class="center black">
+                Welcome back! You've been here for <strong>5</strong> concurrent
+                days! Keep it up!
+                <br />
+                <ul>
+                  {" "}
+                  Progress:
+                  <li> Encryption and Decryption </li>
+                  <li> Intro to Cyphers </li>
+                  <li>
+                    {" "}
+                    <mark>Authentication </mark>{" "}
+                  </li>
+                  <li> Secret Key and Public Key </li>
+                  <li> Algorithms: RSA, Hash Functions </li>
+                </ul>
+              </p>
+            </div>
           </div>
         </div>
 
-        <div style={{ display: "flex", flexFlow: "row nowrap" }}>
-          <div className="HeaderBox">
-            <h2 class="center">My Courses</h2>
-            <p class="center"> Get back into where you last stopped!</p>
-            <p class="center">
-              {" "}
-              Current course: <strong> Intro to Cryptography</strong>
-            </p>
-            <p class="center">
-              {" "}
-              Completion Progress: <strong>63%</strong>{" "}
-            </p>
-
-            <div class="center">
-              <ul>
-                {" "}
-                Progress:
-                <li> Encryption and Decryption </li>
-                <li> Intro to Cyphers </li>
-                <li>
-                  {" "}
-                  <mark>Authentication </mark>{" "}
-                </li>
-                <li> Secret Key and Public Key </li>
-                <li> Algorithms: RSA, Hash Functions </li>
-              </ul>
-            </div>
-
-            <button class="center">Continue</button>
-          </div>
-
-          <div className="HeaderBox">
-            <h2 class="center">Progress Update</h2>
-            <p class="center">
-              Welcome back! You've been here for <strong>5</strong> concurrent
-              days! Keep it up!
-            </p>
-            <p class="center"> Tasks To Do: </p>
-          </div>
+        <div class="footer">
+          <p> © 2021 HackerTeen </p>
         </div>
       </header>
-
-      <main>
-        <div>
-          <h2>Add Tasks</h2>
-          <form>
-            <label>
-              Task:
-              <input style={{ margin: "0 1rem" }} type="text" value={""} />
-            </label>
-            <input type="submit" value="Add" />
-          </form>
-        </div>
-
-        <div>
-          <h2>Task List</h2>
-          <table style={{ margin: "0 auto", width: "100%" }}>
-            <thead>
-              <tr>
-                <th>No.</th>
-                <th>Task</th>
-                <th>Completed</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>1</td>
-                <td>Brew my morning coffee</td>
-                <td>
-                  <input type="checkbox" checked={true} />
-                </td>
-              </tr>
-              <tr>
-                <td>2</td>
-                <td>Attend Orbital mission control on React</td>
-                <td>
-                  <input type="checkbox" checked={true} />
-                </td>
-              </tr>
-              <tr>
-                <td>3</td>
-                <td>Meet my Orbital project advisor</td>
-                <td>
-                  <input type="checkbox" checked={false} />
-                </td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-      </main>
     </div>
   );
 }
