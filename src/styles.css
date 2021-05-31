@@ -1,11 +1,7 @@
 body {
   font: 14px "Roboto", Futura, sans-serif;
   margin: 20px;
-  background: linear-gradient(
-    to right top,
-    rgb(255, 255, 255),
-    rgb(14, 85, 58)
-  );
+  background: rgb(255, 255, 255);
 }
 
 p,
