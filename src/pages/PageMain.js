@@ -4,7 +4,7 @@ import Button from "@material-ui/core/Button";
 export default function App() {
   return (
     <div className="App">
-      <header>
+      <body>
         <div class="navbar sticky">
           <a href="#contact">Contact</a>
           <a href="#about">About</a>
@@ -110,7 +110,7 @@ export default function App() {
         <div class="footer">
           <p> © 2021 HackerTeen </p>
         </div>
-      </header>
+      </body>
     </div>
   );
 }
